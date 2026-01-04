@@ -7,15 +7,47 @@ document.addEventListener('DOMContentLoaded', () => {
   const isMobile = window.Portfolio?.isMobile || window.matchMedia('(max-width: 900px)').matches;
 
   /* ===============================
-     MOBILE VIDEO TAP-TO-ACTIVATE
+     VIDEO TAP-TO-ACTIVATE (MOBILE ONLY)
+     Invisible overlay that requires tap to activate
   =============================== */
   if (isMobile) {
-    document.querySelectorAll('.video-item').forEach(item => {
+    const videoItems = document.querySelectorAll('.video-item');
+    
+    videoItems.forEach(item => {
       const overlay = item.querySelector('.video-overlay');
-      overlay?.addEventListener('click', () => {
-        item.classList.add('is-active');
+      const iframe = item.querySelector('iframe');
+      
+      if (!overlay || !iframe) return;
+      
+      // Style the overlay - invisible but clickable
+      overlay.style.display = 'block';
+      overlay.style.position = 'absolute';
+      overlay.style.top = '0';
+      overlay.style.left = '0';
+      overlay.style.right = '0';
+      overlay.style.bottom = '0';
+      overlay.style.background = 'transparent';
+      overlay.style.zIndex = '100';
+      overlay.style.cursor = 'pointer';
+      
+      // Block iframe initially
+      iframe.style.pointerEvents = 'none';
+      
+      // Activate on click/tap
+      overlay.addEventListener('click', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        
         overlay.style.display = 'none';
-      }, { passive: true });
+        iframe.style.pointerEvents = 'auto';
+        item.classList.add('is-active');
+        
+        // Add autoplay to URL
+        const src = iframe.src;
+        if (src && src.indexOf('autoplay=1') === -1) {
+          iframe.src = src + '&autoplay=1';
+        }
+      });
     });
   }
 
