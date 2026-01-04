@@ -28,37 +28,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
   /* =====================================================
      SHOW NAV WHEN FEATURED SECTION IS VISIBLE (Desktop only)
+     NOTE: This is REMOVED - top nav should never show on desktop homepage
   ===================================================== */
-  if (!isMobile) {
-    const heroSection = document.querySelector(".home-hero");
-    
-    if (heroSection) {
-      function updateNavVisibility() {
-        const heroRect = heroSection.getBoundingClientRect();
-        
-        // If hero's bottom is above viewport (scrolled past), SHOW nav
-        // If hero is still visible, HIDE nav  
-        if (heroRect.bottom < 0) {
-          document.body.classList.add("show-nav");
-        } else {
-          document.body.classList.remove("show-nav");
-        }
-      }
-      
-      let navTicking = false;
-      window.addEventListener("scroll", () => {
-        if (!navTicking) {
-          requestAnimationFrame(() => {
-            updateNavVisibility();
-            navTicking = false;
-          });
-          navTicking = true;
-        }
-      }, { passive: true });
-      
-      updateNavVisibility();
-    }
-  }
+  // Removed the nav visibility code - top nav stays hidden on desktop
 
   /* =====================================================
      SECTION REVEALS (Desktop only)
