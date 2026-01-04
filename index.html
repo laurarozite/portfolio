@@ -11,11 +11,12 @@
 </head>
 
 <body class="home is-loading">
-  <header class="portfolio-header home-nav">
-    
-<div class="page-dim"></div>
 
+
+<header class="portfolio-header home-nav">
+  <div class="page-dim"></div>
   <div class="portfolio-nav">
+
 
     <button class="nav-toggle" aria-label="Toggle menu">
       <span></span>
@@ -67,51 +68,61 @@
   </ul>
 </nav>
 
-<header class="home-hero" >
-<div class="hero-bg" data-parallax="0.02"></div>
+<header class="home-hero">
+  <div class="hero-bg" data-parallax="0.02"></div>
 
-<div class="hero-layout">
-  <h1 class="hero-name">
-    <span>Laura Mendija</span>
-    <span>Rozīte</span>
-  </h1>
+  <div class="hero-layout">
+    <h1 class="hero-name">
+      <span data-text="Laura Mendija">Laura Mendija</span>
+      <span data-text="Rozīte">Rozīte</span>
+    </h1>
 
-  <div class="hero-divider"></div>
+    <div class="hero-divider"></div>
 
-  <div class="hero-about">
-    <p>
-      Digital designer focused on UI, campaigns and visual systems —
-      crafting intentional, emotionally grounded digital experiences.
-    </p>
+    <div class="hero-about">
+      <p>
+        Digital designer focused on UI, campaigns and visual systems —
+        crafting intentional, emotionally grounded digital experiences.
+      </p>
+    </div>
   </div>
-</div>
-
 </header>
 <main class="home-main">
+
 
 <section class="home-featured" id="featured">
   <span class="home-label">Featured Project</span>
 
   <a href="projects/nitu-web.html" class="featured-layout">
+    <!-- SIMPLIFIED: Remove nested parallax divs on mobile -->
     <div class="featured-media" data-parallax="0.12">
-      <div class="featured-media-parallax">
-        <div class="featured-media-inner">
-          <div class="featured-media-img">
-            <img src="source/nitu-mockup.jpg" alt="NITU Web" />
-          </div>
-        </div>
-      </div>
+      <img 
+        src="source/nitu-mockup-small.jpg" 
+        alt="NITU Web"
+        srcset="
+          source/nitu-mockup-small.jpg 480w,
+          source/nitu-mockup-medium.jpg 768w,
+          source/nitu-mockup.jpg 1200w
+        "
+        sizes="(max-width: 600px) 480px,
+               (max-width: 1024px) 768px,
+               1200px"
+      />
     </div>
 
     <div class="featured-meta">
       <h3 class="fm-title">NITU Web</h3>
-      <span class="fm-type">UX/UI · Desktop and Mobile Web Experience · Full-stack</span>
-
-      <p class="fm-desc">
-      A responsive product experience translating high-performance
-      custom PCs from physical retail into a clear web experience for desktop and mobile.
-      </p>
-
+        <div class="fm-type">
+  <span>UX/UI</span>
+  <span class="type-dot"></span>
+  <span>Desktop & Mobile</span>
+  <span class="type-dot"></span>
+  <span>Front-End</span>
+</div>
+        <p class="fm-desc">
+          Designing and building a responsive ecommerce experience – 
+          from product structure and visual systems to front-end implementation.
+        </p>
       <span class="scroll-hint fm-cta">View project →</span>
     </div>
   </a>
@@ -142,7 +153,7 @@
 <div class="campaign-grid reveal-group">
 
     <a href="projects/seasonal.html#bts" class="campaign-card">
-      <img src="source/bts-key.png" alt="Back to School" />
+      <img src="source/BTS_card.jpg" alt="Back to School" />
       <div class="campaign-meta">
         <h4>Back to School</h4>
         <span>Concept · Visual Identity</span>
@@ -150,7 +161,7 @@
     </a>
 
     <a href="projects/seasonal.html#bf" class="campaign-card">
- <img src="source/V2_preview61.jpg" alt="Black Friday" />
+ <img src="source/BF_card.jpg" alt="Black Friday" />
       <div class="campaign-meta">
         <h4>Black Friday</h4>
         <span>3D · Motion · Digital</span>
@@ -158,7 +169,7 @@
     </a>
 
     <a href="projects/seasonal.html#xmas" class="campaign-card">
-      <img src="source/zsv_vartu_ilustracija.jpg" alt="Christmas" />
+      <img src="source/ZSV_card.jpg" alt="Christmas" />
       <div class="campaign-meta">
         <h4>Christmas</h4>
         <span>Illustration · Campaign System</span>
@@ -166,7 +177,7 @@
     </a>
 
     <a href="projects/seasonal.html#brand" class="campaign-card">
-      <img src="source/Logitech_novembris_2025_mob_ban3.jpg" alt="Partner Campaaigns" />
+      <img src="source/Brands_card.jpg" alt="Partner Campaigns" />
       <div class="campaign-meta">
         <h4>Partner Campaigns</h4>
         <span>Adaptations · Paid Media</span>
@@ -193,16 +204,8 @@
     </div>
   </article>
 </section>
-
 <section class="home-about" id="about">
   <span class="home-label">About</span>
-
-  <!-- <figure class="about-hero">
-    <img
-      src="/source/photography/axvar.jpg"
-      alt="Laura Mendija Rozīte — installation portrait"
-    />
-  </figure> -->
 
   <div class="about-content">
 
@@ -227,7 +230,7 @@
       </p>
 
       <p>
-        I’m comfortable owning projects end-to-end: from concept and UX logic
+        I'm comfortable owning projects end-to-end: from concept and UX logic
         to visual execution, motion and final delivery. I value clarity,
         restraint and intention in both design and collaboration.
       </p>
@@ -264,301 +267,28 @@
         </ul>
       </div>
     </div>
-<div class="about-tools">
-  <span>Figma</span>
-  <span>Photoshop</span>
-  <span>Illustrator</span>
-  <span>InDesign</span>
-  <span>After Effects</span>
-  <span>Premiere Pro</span>
-  <span>Blender</span>
-  <span>Unity</span>
-  <span>HTML / CSS</span>
-  <span>JavaScript (basic)</span>
-</div>
 
+    <div class="about-tools">
+      <span>Figma</span>
+      <span>Photoshop</span>
+      <span>Illustrator</span>
+      <span>InDesign</span>
+      <span>After Effects</span>
+      <span>Premiere</span>
+      <span>Blender</span>
+      <span>Unity</span>
+      <span>HTML/CSS</span>
+      <span>JavaScript</span>
+    </div>
 
   </div>
 </section>
-
 
 </main>
 
 
 <a href="#top" class="scroll-top" aria-label="Scroll to top"></a>
-
-<script>
-/* =====================================================
-   GLOBAL FLAGS
-===================================================== */
-const isMobile = window.matchMedia('(max-width: 900px)').matches;
-
-/* =====================================================
-   PAGE LOAD 
-===================================================== */
-window.addEventListener("load", () => {
-  requestAnimationFrame(() => {
-    document.body.classList.remove("is-loading");
-    document.body.classList.add("is-loaded");
-
-    if (isMobile) {
-      document.body.classList.add("mobile-ready");
-    }
-  });
-});
-
-/* =====================================================
-   SECTION REVEAL
-===================================================== */
-document.addEventListener("DOMContentLoaded", () => {
-  const sections = document.querySelectorAll("section");
-
-  if (!("IntersectionObserver" in window)) {
-    sections.forEach(s => s.classList.add("is-visible"));
-    return;
-  }
-
-  const sectionObserver = new IntersectionObserver(
-    entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("is-visible");
-          sectionObserver.unobserve(entry.target);
-        }
-      });
-    },
-    {
-      threshold: 0.15,
-      rootMargin: "0px 0px -100px 0px"
-    }
-  );
-
-  if (!isMobile) {
-    sections.forEach(section => {
-      if (section.id !== "featured") {
-        sectionObserver.observe(section);
-      }
-    });
-  }
-});
-
-/* =====================================================
-   CAMPAIGN NAV ACTIVE STATE + SCROLL TOP
-===================================================== */
-(() => {
-  const navLinks = [...document.querySelectorAll(".campaign-link")];
-  const trackedSections = [...document.querySelectorAll("#featured, #campaigns, #photo, #about")];
-  const scrollTopBtn = document.querySelector(".scroll-top");
-
-  function setActive(section) {
-    navLinks.forEach(l => l.classList.remove("active"));
-    const link = document.querySelector(`.campaign-link[href="#${section.id}"]`);
-    link?.classList.add("active");
-  }
-
-  function handleScroll() {
-    let current = trackedSections[0];
-
-    trackedSections.forEach(section => {
-      const rect = section.getBoundingClientRect();
-      if (rect.top < window.innerHeight * 0.5) {
-        current = section;
-      }
-    });
-
-    setActive(current);
-    scrollTopBtn?.classList.toggle("visible", window.scrollY > 400);
-  }
-
-  window.addEventListener("scroll", handleScroll);
-  window.addEventListener("load", handleScroll);
-})();
-
-/* =====================================================
-   CAMPAIGN CARDS STAGGER
-===================================================== */
-(() => {
-  const campaignSection = document.querySelector(".home-campaigns");
-  const campaignCards = document.querySelectorAll(".campaign-card");
-
-  if (!campaignSection || isMobile) return;
-
-  const observer = new IntersectionObserver(
-    ([entry]) => {
-      if (entry.isIntersecting) {
-        campaignCards.forEach((card, i) => {
-          setTimeout(() => card.classList.add("is-visible"), i * 150);
-        });
-      }
-    },
-    { threshold: 0.3 }
-  );
-
-  observer.observe(campaignSection);
-})();
-
-/* =====================================================
-   FEATURED SECTION REVEAL
-===================================================== */
-(() => {
-  const featuredSection = document.querySelector(".home-featured");
-  const featuredText = featuredSection?.querySelector(".featured-meta");
-
-  if (!featuredSection || isMobile) return;
-
-  const observer = new IntersectionObserver(
-    ([entry], obs) => {
-      if (entry.isIntersecting) {
-        featuredSection.classList.add("is-visible");
-        featuredText?.classList.add("text-visible");
-        obs.unobserve(featuredSection);
-      }
-    },
-    { threshold: 0.5 }
-  );
-
-  observer.observe(featuredSection);
-})();
-
-/* =====================================================
-   HERO → CAMPAIGN NAV TOGGLE
-===================================================== */
-(() => {
-  const hero = document.querySelector(".home-hero");
-  if (!hero) return;
-
-  const observer = new IntersectionObserver(
-    ([entry]) => {
-      document.body.classList.toggle("show-campaign-nav", !entry.isIntersecting);
-    },
-    { threshold: 0.15 }
-  );
-
-  observer.observe(hero);
-})();
-
-/* =====================================================
-   PARALLAX LOOP
-===================================================== */
-(() => {
-  const parallaxEls = [...document.querySelectorAll("[data-parallax]")];
-  const pageBg = document.querySelector(".page-parallax");
-
-  function loop() {
-    const y = window.scrollY;
-
-    if (pageBg) {
-      pageBg.style.transform = `translate3d(0, ${y * 0.12}px, 0)`;
-    }
-
-    parallaxEls.forEach(el => {
-      if (el.closest(".campaign-card")) return;
-      const speed = parseFloat(el.dataset.parallax);
-      const target = el.querySelector(".featured-media-parallax") || el;
-      target.style.transform = `translate3d(0, ${y * speed}px, 0)`;
-    });
-
-    requestAnimationFrame(loop);
-  }
-
-  requestAnimationFrame(loop);
-})();
-
-/* =====================================================
-   LANGUAGE SWITCH ACTIVE STATE
-===================================================== */
-(() => {
-  const currentPath = window.location.pathname;
-  document.querySelectorAll('[data-lang-switch] a').forEach(link => {
-    link.toggleAttribute(
-      'aria-current',
-      currentPath.endsWith(link.getAttribute('href'))
-    );
-  });
-})();
-
-/* =====================================================
-   NAV MENU LOGIC
-===================================================== */
-document.addEventListener('DOMContentLoaded', () => {
-  const body = document.body;
-  const navToggle = document.querySelector('.nav-toggle');
-  const menu = document.querySelector('.portfolio-links');
-  const pageDim = document.querySelector('.page-dim');
-  const portfolioNav = document.querySelector('.portfolio-nav');
-  const navLinks = document.querySelectorAll('.portfolio-links a');
-  const scrollTopBtn = document.querySelector('.scroll-top');
-
-  let scrollPosition = 0;
-
-  function openNav() {
-    scrollPosition = window.scrollY;
-
-    if (!isMobile) {
-      body.style.position = 'fixed';
-      body.style.top = `-${scrollPosition}px`;
-      body.style.width = '100%';
-    }
-
-    body.classList.add('nav-open');
-    portfolioNav.classList.add('open');
-    navToggle?.setAttribute('aria-expanded', 'true');
-  }
-
-  function closeNav(skipScrollRestore = false) {
-    if (!isMobile) {
-      body.style.position = '';
-      body.style.top = '';
-      body.style.width = '';
-    }
-
-    if (!skipScrollRestore && !isMobile) {
-      window.scrollTo(0, scrollPosition);
-    }
-
-    body.classList.remove('nav-open');
-    portfolioNav.classList.remove('open');
-    navToggle?.setAttribute('aria-expanded', 'false');
-  }
-
-  navToggle?.addEventListener('click', e => {
-    e.stopPropagation();
-    body.classList.contains('nav-open') ? closeNav() : openNav();
-  });
-
-  pageDim?.addEventListener('click', () => closeNav());
-
-  document.addEventListener('keydown', e => {
-    if (e.key === 'Escape' && body.classList.contains('nav-open')) {
-      closeNav();
-    }
-  });
-
-  navLinks.forEach(link => {
-    link.addEventListener('click', e => {
-      const href = link.getAttribute('href');
-      if (!href) return;
-
-      if (href.startsWith('#')) {
-        e.preventDefault();
-        closeNav();
-        document.querySelector(href)?.scrollIntoView({ behavior: 'smooth' });
-      } else {
-        closeNav(true);
-      }
-    });
-  });
-
-  scrollTopBtn?.addEventListener('click', () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  });
-});
-</script>
-
-
+<script src="js/portfolio-core.js"></script>
+<script src="js/index.js"></script>
 </body>
 </html>
-
-
-
-
