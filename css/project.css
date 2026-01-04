@@ -368,7 +368,7 @@ body.has-scrolled .hero-snapshot strong {
   width: 100vw;
   margin-left: calc(-50vw + 50%);
   margin-top: 4rem;
-  margin-bottom: 4rem;
+  margin-bottom: 1rem;
   overflow: hidden;
 }
 
@@ -557,7 +557,7 @@ body.has-scrolled .hero-snapshot strong {
 
 .category-sections {
   display: grid;
-  gap: 4rem;
+  gap: 7rem;
 }
 
 .category-section {
@@ -830,7 +830,7 @@ body.has-scrolled .hero-snapshot strong {
 .emphasis-line::before {
   content: '';
   position: absolute;
-  left: 0;
+  left: -0.9em;
   top: 0.2em;
   bottom: 0.2em;
   width: 2px;
@@ -839,7 +839,7 @@ body.has-scrolled .hero-snapshot strong {
 }
 
 .campaign-intro {
-  max-width: 72ch;
+  max-width: 90ch;
   margin: 0 auto 3rem;
   font-size: 1rem;
   line-height: 1.65;
@@ -1149,4 +1149,276 @@ video {
 max-width: 100%;
 height: auto;
 display: block;
+}
+
+
+
+
+
+
+body.page-case .showcase-conclusion {
+  text-align: center;
+}
+
+.page-seasonal .prime-main img,
+.page-seasonal .prime-main video,
+.page-seasonal .prime-side img,
+.page-seasonal .key-visual img,
+.page-seasonal .full-bleed img {
+  border-radius: 6px !important;
+}
+
+.key-visual {
+  display: flex;
+  justify-content: center;
+  margin: 3rem 0;
+}
+
+.key-visual img {
+  width: 100%;
+  max-width: 900px;
+  display: block;
+}
+
+.page-seasonal #bf .prime-showcase:nth-child(6) {
+  grid-template-columns: 1.2fr 0.8fr !important;
+  align-items: flex-start !important;
+  gap: 3rem !important;
+}
+
+.page-seasonal #bf .prime-showcase:nth-child(6) .prime-main img {
+  max-width: 700px !important;
+  max-height: none !important;
+}
+
+.page-seasonal #xmas .key-visual img {
+  max-width: 800px !important;
+}
+
+.page-seasonal #xmas .prime-showcase:nth-child(5) .prime-main img {
+  max-width: 700px !important;
+}
+
+.page-seasonal #bts .prime-showcase:nth-child(8) .prime-side img {
+  max-width: 600px !important;
+  max-height: 75vh !important;
+}
+
+.page-seasonal #bts .prime-showcase:nth-child(10) .prime-main img,
+.page-seasonal #bts .prime-showcase:nth-child(10) .prime-side img {
+  max-width: 700px !important;
+  max-height: 75vh !important;
+}
+
+.page-seasonal #brand .prime-showcase:nth-child(5) {
+  grid-template-columns: 1fr !important;
+  max-width: 650px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+.page-seasonal #brand .prime-showcase:nth-child(5) .prime-text {
+  text-align: center !important;
+}
+
+.page-seasonal #brand .key-visual:nth-child(7) {
+  margin-top: 5rem !important;
+}
+
+.page-seasonal #brand .prime-showcase:nth-child(8) .prime-main img {
+  max-width: 700px !important;
+  max-height: none !important;
+}
+
+.page-seasonal #brand .prime-showcase:last-child {
+  grid-template-columns: 1fr 1fr !important;
+  align-items: stretch !important;
+}
+
+.page-seasonal #brand .prime-showcase:last-child .prime-main,
+.page-seasonal #brand .prime-showcase:last-child .prime-side {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.page-seasonal #brand .prime-showcase:last-child .prime-main img,
+.page-seasonal #brand .prime-showcase:last-child .prime-side img {
+  max-width: 100% !important;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+}
+
+body.page-seasonal .campaign-intro {
+  max-width: 65ch !important;
+  margin: 0 auto 3rem !important;
+  font-size: 0.95rem !important;
+  line-height: 1.7 !important;
+  opacity: 0.8 !important;
+  text-align: center !important;
+  font-style: italic !important;
+}
+
+body.page-seasonal #bf .prime-showcase:first-of-type {
+  grid-template-columns: 1fr !important;
+  max-width: 1400px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+body.page-seasonal #bf .prime-showcase:first-of-type .video-wrap {
+  max-width: 100% !important;
+  width: 100% !important;
+}
+
+body.page-seasonal #bf .prime-showcase:first-of-type .prime-video {
+  max-width: 100% !important;
+  max-height: 80vh !important;
+  width: 100% !important;
+}
+
+body.page-seasonal #bf .prime-showcase:last-of-type {
+  grid-template-columns: 1fr !important;
+  max-width: 700px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  gap: 1.5rem !important;
+}
+
+body.page-seasonal #bf .prime-showcase:last-of-type .prime-main img {
+  max-width: 100% !important;
+  max-height: none !important;
+  width: 100% !important;
+}
+
+body.page-seasonal #bf .prime-showcase:last-of-type .prime-text {
+  text-align: center !important;
+}
+
+body.page-seasonal #xmas .campaign-intro + .prime-showcase {
+  max-width: 1200px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+body.page-seasonal #xmas .campaign-intro + .prime-showcase .prime-main img {
+  max-width: 100% !important;
+  max-height: none !important;
+  width: 100% !important;
+}
+
+body.page-seasonal .key-visual + .campaign-intro,
+body.page-seasonal .full-bleed + .campaign-intro,
+body.page-seasonal .prime-showcase + .campaign-intro {
+  margin-top: 1.5rem !important;
+}
+
+body.page-seasonal #bts .prime-showcase:has(.prime-main):has(.prime-side) {
+  grid-template-columns: 1fr 1fr !important;
+  gap: 2.5rem !important;
+  align-items: center !important;
+  max-width: 1400px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+body.page-seasonal #bts .prime-showcase:has(.prime-main):has(.prime-side) .prime-main,
+body.page-seasonal #bts .prime-showcase:has(.prime-main):has(.prime-side) .prime-side {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  width: 100% !important;
+}
+
+body.page-seasonal #bts .prime-showcase:has(.prime-main):has(.prime-side) .prime-main img,
+body.page-seasonal #bts .prime-showcase:has(.prime-main):has(.prime-side) .prime-side img {
+  width: 100% !important;
+  max-width: 100% !important;
+  height: auto !important;
+  object-fit: contain !important;
+  aspect-ratio: auto !important;
+}
+
+body.page-seasonal #brand h3 {
+  font-size: 1.8rem !important;
+  margin-top: 6rem !important;
+  margin-bottom: 1rem !important;
+}
+
+body.page-seasonal #brand h3:first-of-type {
+  margin-top: 3rem !important;
+}
+
+body.page-seasonal #brand .key-visual + .prime-showcase {
+  grid-template-columns: 1fr !important;
+  max-width: 650px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  gap: 1.5rem !important;
+}
+
+body.page-seasonal #brand .key-visual + .prime-showcase .prime-main {
+  justify-content: center !important;
+}
+
+body.page-seasonal #brand .key-visual + .prime-showcase .prime-text {
+  text-align: center !important;
+  margin-top: 0 !important;
+}
+
+body.page-seasonal #brand .key-visual + .prime-showcase + .campaign-intro + .prime-showcase {
+  grid-template-columns: 1fr !important;
+  max-width: 700px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  gap: 1.5rem !important;
+}
+
+body.page-seasonal #brand .key-visual + .prime-showcase + .campaign-intro + .prime-showcase .prime-main img {
+  max-width: 100% !important;
+  max-height: none !important;
+  width: 100% !important;
+}
+
+body.page-seasonal #brand .key-visual + .prime-showcase + .campaign-intro + .prime-showcase .prime-text {
+  text-align: center !important;
+  margin-top: 0 !important;
+}
+
+body.page-seasonal #brand .prime-showcase:last-of-type {
+  grid-template-columns: 1fr 1fr !important;
+  gap: 2.5rem !important;
+  align-items: center !important;
+  max-width: 1400px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+body.page-seasonal #brand .prime-showcase:last-of-type .prime-main,
+body.page-seasonal #brand .prime-showcase:last-of-type .prime-side {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  width: 100% !important;
+}
+
+body.page-seasonal #brand .prime-showcase:last-of-type .prime-main img,
+body.page-seasonal #brand .prime-showcase:last-of-type .prime-side img {
+  width: 100% !important;
+  max-width: 100% !important;
+  height: auto !important;
+  object-fit: contain !important;
+  aspect-ratio: auto !important;
+}
+
+
+.prime-showcase2 {
+  grid-template-columns: auto;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+}
+
+.prime-showcase2 {
+  gap: 0.1rem;
 }
