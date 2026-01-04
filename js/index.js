@@ -30,16 +30,12 @@ document.addEventListener("DOMContentLoaded", () => {
      SHOW NAV WHEN FEATURED SECTION IS VISIBLE (Desktop only)
      NOTE: This is REMOVED - top nav should never show on desktop homepage
   ===================================================== */
-  // Removed the nav visibility code - top nav stays hidden on desktop
 
-  /* =====================================================
-     SECTION REVEALS (Desktop only)
-  ===================================================== */
-  if (isMobile) {
-    document.querySelectorAll("section, .section-header, .practice-group").forEach(el => {
-      el.classList.add("is-visible");
-    });
-  } else {
+if (isMobile) {
+  document.querySelectorAll("section, .section-header, .practice-group, .campaign-card").forEach(el => {
+    el.classList.add("is-visible");
+  });
+} else {
     const sections = document.querySelectorAll("section");
     const sectionHeaders = document.querySelectorAll(".section-header");
     const campaignIntro = document.querySelector(".campaign-intro");
