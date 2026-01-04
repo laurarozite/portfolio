@@ -1736,5 +1736,16 @@ body.show-campaign-nav .campaign-nav {
     scroll-behavior: smooth;
   }
   
+  .home-photo {
+    margin-bottom: 0px;
+  }
+
+  .home-campaigns {
+    margin-bottom: 2rem;
+  }
+
+  .home-featured {
+    margin-bottom: 0rem;
+  }
 }
 
