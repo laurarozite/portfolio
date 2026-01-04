@@ -1018,7 +1018,7 @@ body.world-xmas { background-color: #081219; }
 display: none !important;
 }
 .campaign-section {
-padding: 4rem 1.25rem !important;
+padding: 0.2rem 0.2rem !important;
 }
 .campaign-section,
 .campaign-section > * {
@@ -1421,4 +1421,11 @@ strong {
 
 .showcase-conclusion {
   text-align: center;
+}
+
+@media (max-width: 900px) {
+
+.campaign-section {
+padding: 1rem 2rem 1rem !important;
+}
 }
