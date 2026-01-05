@@ -849,7 +849,7 @@ body.has-scrolled .hero-snapshot strong {
 
 .campaign-nav {
   position: fixed;
-  left: 2rem;
+  left: 1rem;
   top: 50%;
   transform: translate(-16px, -50%);
   z-index: 120;
@@ -860,7 +860,10 @@ body.has-scrolled .hero-snapshot strong {
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.4s ease, transform 0.4s ease;
+
 }
+
+
 
 body.show-campaign-nav .campaign-nav {
   opacity: 1;
@@ -879,17 +882,17 @@ body.show-campaign-nav .campaign-nav {
 }
 
 .campaign-nav::after {
-  content: '';
-  position: absolute;
-  left: -3.2rem;
-  top: 50%;
-  width: 100px;
-  height: 360px;
-  transform: translateY(-50%) rotate(-6deg);
-  background: radial-gradient(ellipse at 30% 50%, rgba(242,179,196,0.12), transparent 70%);
-  filter: blur(36px);
-  opacity: 0.35;
+  width: 40px;
+  height: 260px;
+  left: -1.5rem;
+  filter: blur(12px);
+  background: linear-gradient(
+    to right,
+    rgba(242,179,196,0.25),
+    transparent
+  );
 }
+
 
 .campaign-nav,
 .campaign-nav * {
@@ -910,9 +913,9 @@ body.show-campaign-nav .campaign-nav {
   display: inline-block;
   color: #666;
   text-decoration: none;
-  font-size: 0.85rem;
+  font-size: 0.65rem;
   letter-spacing: 0.08em;
-  padding-left: 1.25rem;
+  padding-left: 0.6rem;
   transform-origin: left center;
   transition: color 0.4s ease, transform 0.45s ease, letter-spacing 0.45s ease;
 }
