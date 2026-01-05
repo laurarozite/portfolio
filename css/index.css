@@ -1749,3 +1749,23 @@ body.show-campaign-nav .campaign-nav {
   }
 }
 
+
+
+@media (max-width: 1400px) {
+  .hero-layout {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    align-items: flex-start;
+  }
+
+  .hero-divider {
+    display: none;
+  }
+
+  .hero-about {
+    max-width: 720px;
+  }
+}
+.hero-name {
+  white-space: nowrap;
+}
