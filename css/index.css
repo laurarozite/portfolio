@@ -13,8 +13,8 @@
   min-height: 75vh;
   padding-top: clamp(4rem, 8vh, 6rem);
   padding-bottom: 4rem;
-  padding-left: calc(var(--nav-width) + 8vw/1.5);
-  padding-right: 8vw;
+  padding-left: 4vw;
+  padding-right: 2vw;
   display: flex;
   align-items: center;
   overflow: hidden;
@@ -47,7 +47,7 @@
   font-weight: 500;
   line-height: 0.88;
   letter-spacing: -0.035em;
-  margin-left: 3.5rem;
+  /* margin-left: -8.5rem; */
 }
 
 .hero-name span {
@@ -1075,8 +1075,7 @@ body.show-campaign-nav .campaign-nav {
   }
 
   .home-hero {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
+
     min-height: auto;
     padding-top: 5rem;
     padding-bottom: 2rem;
@@ -1750,22 +1749,6 @@ body.show-campaign-nav .campaign-nav {
 }
 
 
-
-@media (max-width: 1400px) {
-  .hero-layout {
-    grid-template-columns: 1fr;
-    gap: 2rem;
-    align-items: flex-start;
-  }
-
-  .hero-divider {
-    display: none;
-  }
-
-  .hero-about {
-    max-width: 720px;
-  }
-}
 .hero-name {
   white-space: nowrap;
 }
